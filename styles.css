@@ -1,0 +1,39 @@
+.dropbtn{
+    background-color: rgb(53, 122, 250);
+    padding: .5rem 1rem;
+    font-weight: 600;
+}
+.dropbtn:hover, .dropbtn:focus{
+    background-color: rgb(79, 134, 236);
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    background-color: rgb(119, 119, 119);
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow: auto;
+}
+
+.dropdown-content a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: .6rem .8rem;
+}
+
+.dropdown-content a:hover{
+    background-color: #ddd;
+}
+
+/*Use javascript to toggle this class for the dropdown-content container when user clicks button or outside of button*/
+.show{
+    display: block;
+}
