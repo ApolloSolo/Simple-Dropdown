@@ -5,10 +5,53 @@ body{
     padding: 0;
 }
 
-label{
+header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: rgb(102, 165, 224);;
     margin: 0;
     padding: 0;
 }
+
+.ApolloSolo{
+    width: auto;
+    height: 2.1rem;
+    padding-left: .5rem;
+    padding-right: .2rem;
+    
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+}
+
+.nav-ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    padding: 1rem;
+    position: relative;  
+}
+
+li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .5rem;
+}
+li:hover{
+    text-shadow: 2px 2px 5px #929292;
+    background-color: rgb(147, 191, 233);
+}
+
+/****Navbar ropdown*****/
 
 .dropbtn{
     display: none;
@@ -18,10 +61,6 @@ label{
     padding: 1rem;
     font-weight: 600;
 }
-.dropbtn:hover{
-    background-color: rgb(83, 139, 141);
-}
-
 .dropdown{
     position: relative;
     display: inline-block;
@@ -53,45 +92,7 @@ label{
     display: block;
 }
 
-/****Nav bar with dropdown*****/
-header{
-    background-color: cadetblue;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-bar{
-    display: flex;
-    align-items: center;
-}
-
-.nav-ul{
-    list-style-type: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-li{
-    padding: 1rem;
-    position: relative;  
-}
-
-li a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-    font-weight: bold;
-    padding: .5rem;
-}
-li:hover{
-    text-shadow: 2px 2px 4px #6b6b6b;
-}
-
 @media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
-    }
     .nav-ul{
         display: none;
     }
@@ -99,23 +100,21 @@ li:hover{
         display: block;
         width: 75px;
     }
+    .ApolloSolo{
+        width: auto;
+        height: 2.1rem;
+        position: relative;
+        top: 7px;
+        right: 8px;
+        float: right;
+    }
+    .nav-bar{
+        display: block;
+    }
   }
 
-  li::before{
-      content: '';
-      display: block;
-      height: 3px;
-      background-color: rgba(0,0,0,0.8);
-      position: absolute;  /*will make line long because its position is absoluet - relative to my screen window - li position relative will shrink this - position is now absoulte relative to the li*/
-      top: 0px;
-      width: 0%;
-      transition: all ease-in-out 300ms;
-  }
-
-  li:hover::before{
-    width: 70%;
-  }
-
+  /***Hamburger Lines for Dropdown***/
+  
   .hamburger::before{
     content: '';
     display: block;
