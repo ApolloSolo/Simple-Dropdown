@@ -1,0 +1,45 @@
+<html <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dropdown Menu</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        
+        <header>
+            <div class="nav-div">
+                <nav class="nav-bar">
+                    <img class="ApolloSolo" src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-bow-hunting-kiranshastry-lineal-kiranshastry.png"/>
+                    <ul class="nav-ul">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="#">What's New</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#welcome-section">About</a></li>
+                    </ul>
+                    <div class="dropdown">
+                        <button onclick="dropMenu()" class="dropbtn"><span class="hamburger"><hr></span></button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="../../index.html">Home</a>
+                            <a href="#">What's New</a>
+                            <a href="#">Contact</a>
+                            <a href="#">About</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!--We use the button element to open the dropdown menu, but we can also use a p or a tag. We use a container div to wrap the 
+        dropdown menu item in it then wrap everything in a div to position-->
+        
+        <script src="app.js" async defer></script>
+    </body>
+</html>

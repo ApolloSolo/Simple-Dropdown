@@ -1,0 +1,146 @@
+*{box-sizing: border-box;}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: rgb(102, 165, 224);;
+    margin: 0;
+    padding: 0;
+}
+
+.ApolloSolo{
+    width: auto;
+    height: 2.1rem;
+    padding-left: .5rem;
+    padding-right: .2rem;
+    
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+}
+
+.nav-ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    padding: 1rem;
+    position: relative;  
+}
+
+li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .5rem;
+}
+li:hover{
+    text-shadow: 2px 2px 5px #929292;
+    background-color: rgb(147, 191, 233);
+}
+
+/****Navbar ropdown*****/
+
+.dropbtn{
+    display: none;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    padding: 1rem;
+    font-weight: 600;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    background-color: #f9f9f9;;
+    position: absolute;
+    width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow: auto;
+}
+
+.dropdown-content a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: .6rem .8rem;
+}
+
+.dropdown-content a:hover{
+    background-color: #ddd;
+}
+
+/*Use javascript to toggle this class for the dropdown-content container when user clicks button or outside of button*/
+.show{
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-ul{
+        display: none;
+    }
+    .dropbtn{
+        display: block;
+        width: 75px;
+    }
+    .ApolloSolo{
+        width: auto;
+        height: 2.1rem;
+        position: relative;
+        top: 7px;
+        right: 8px;
+        float: right;
+    }
+    .nav-bar{
+        display: block;
+    }
+  }
+
+  /***Hamburger Lines for Dropdown***/
+  
+  .hamburger::before{
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;  /*will make line long because its position is absoluet - relative to my screen window - li position relative will shrink this - position is now absoulte relative to the li*/
+    top: 15px;
+    width: 35px;
+    transition: all ease-in-out 250ms;
+}
+.hamburger::after{
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;  /*will make line long because its position is absoluet - relative to my screen window - li position relative will shrink this - position is now absoulte relative to the li*/
+    top: 30px;
+    width: 35px;
+    transition: all ease-in-out 250ms;
+}
+
+hr{
+    color: black;
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    border: none;
+    float: left;
+}
